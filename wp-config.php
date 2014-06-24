@@ -22,11 +22,8 @@ define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/wp-content' );
 if ( !defined('ABSPATH') )
   define('ABSPATH', dirname(__FILE__) . '/wp/');
 
-/** Sets up WordPress vars and included files. */
-require_once(ABSPATH . 'wp-settings.php');
-
 // ** Heroku database settings - from Heroku Environment ** //
-$db = parse_url($_ENV["DATABASE_URL"]);
+$db = parse_url(getenv("DATABASE_URL"));
 define('DB_NAME', trim($db["path"],"/"));
 define('DB_USER', $db["user"]);
 define('DB_PASSWORD', $db["pass"]);
@@ -88,4 +85,7 @@ define('WPLANG', getenv('WPLANG') ?: '');
 define('WP_DEBUG', getenv('WP_DEBUG'));
 
 /* That's all, stop editing! Happy blogging. */
+
+/** Sets up WordPress vars and included files. */
+require_once(ABSPATH . 'wp-settings.php');
 
