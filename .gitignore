@@ -1,0 +1,5 @@
+composer.phar
+vendor
+wp
+wp-content/plugins
+wp-content/themes
