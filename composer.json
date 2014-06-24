@@ -21,7 +21,7 @@
     }
   ],
   "require": {
-    "php": "~5.5.13",
+    "php": "~5.5.12",
     "wordpress": ">=3.8",
     "fancyguy/webroot-installer": "1.0.0",
     "wpackagist-plugin/tantan-s3-cloudfront": "0.4.1.1",
